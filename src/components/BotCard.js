@@ -1,8 +1,7 @@
 import React from "react";
 
 const BotCard = props => {
-  const { bot } = props;
-
+  const { bot, executeAction } = props;
   let botType;
 
   switch (bot.bot_class) {
@@ -19,12 +18,13 @@ const BotCard = props => {
       botType = <div />;
   }
 
+  const execute = (e) => {
+    executeAction(bot.id)
+  };
+
   return (
-    <div className="ui column">
-      <div
-        className="ui card"
-        onClick={() => console.log("add code to connect event listener")}
-      >
+    <div className ="ui column">
+      <div className="ui card" key={bot.id} onClick={execute}>
         <div className="image">
           <img alt="oh no!" src={bot.avatar_url} />
         </div>
@@ -33,29 +33,29 @@ const BotCard = props => {
             {bot.name} {botType}
           </div>
 
-          <div className="meta text-wrap">
+          <div className="meta wrap-text">
             <small>{bot.catchphrase}</small>
           </div>
         </div>
         <div className="extra content">
           <span>
-            <i className="icon heartbeat" />
-            {bot.health}
+            <i className="icon heartbeat"/>
+              {bot.health}
           </span>
 
           <span>
             <i className="icon lightning" />
-            {bot.damage}
+              {bot.damage}
           </span>
           <span>
             <i className="icon shield" />
-            {bot.armor}
+              {bot.armor}
           </span>
         </div>
+
       </div>
     </div>
   );
-
 };
 
 export default BotCard;
