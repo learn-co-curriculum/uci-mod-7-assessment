@@ -5,7 +5,7 @@ can custom build your own Bot Army!
 
 Here's the scenario: a galactic ruler has hired you, a galactic web developer,
 to develop a galactic React app in that will allow them to browse through a
-list of robots, view a robot's details, and, if the bot is to their liking,
+list of robots, view a robot's details, and if the bot is to their liking,
 enlist that bot into their army.
 
 ![alt text][full_demo]
@@ -39,9 +39,11 @@ for all of the pieces of the page.
 ### Setting up the JSON Server
 
 This assessment is focused on React, but we still need some data to work with.
-Specifically, we need _bots_. To get this data, we will use a [JSON server][]
+Specifically, we need _bots_. To get this data, we will use a [JSON Server][]
 to mock an API. The server data is already populated in `db.json`. Run
 `npm install`, then run `json-server --watch db.json` to start the server.
+
+[JSON Server]: https://github.com/typicode/json-server
 
 To confirm the server is running, you can visit http://localhost:3000/bots to
 see the JSON of all bots.
@@ -49,9 +51,12 @@ see the JSON of all bots.
 ### Starting up React
 
 Leave the JSON server running, open a _second_ terminal window and navigate to
-this assessment. To start the React frontend, run `npm start`. Follow along with
-these steps below, making sure to read all of the instructions before beginning
-to code.
+this assessment. To start the React frontend, run `npm start`. As both React
+and JSON Server both run on port 3000 by default, you will be prompted to start
+React on port 3001, and your frontend will be available at http://localhost:3001.
+
+Follow along with these steps below, making sure to read all of the instructions
+before beginning to code.
 
 ### 1.  Fetching Bots
 
