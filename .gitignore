@@ -1,21 +1,22 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
 .DS_Store
-logs
-*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 npm-debug.log*
-pids
-*.pid
-*.seed
-lib-cov
-build/Release
-node_modules
-jspm_packages
-.npm
-.node_repl_history
-.results.json
-/.bundle
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/log/*
-!/log/.keep
-/tmp
-    
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
